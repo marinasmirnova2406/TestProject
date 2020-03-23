@@ -1,0 +1,37 @@
+
+
+body {
+  background-color: gray;
+};
+
+.main-container {
+  padding: 0 5% 20px 5%;
+}
+
+.second-block, .slider {
+  display: flex;
+  justify-content: center;
+}
+
+.slider {
+  width: 70%;
+}
+
+.third-block {
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.third-block .property {
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.third-block .property img {
+  display: block;
+}
