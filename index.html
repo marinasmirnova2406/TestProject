@@ -3,34 +3,40 @@
   <head>
     <meta charset="utf-8">
     <title>TEST PROJECT</title>
-    <!-- Подключение основного css-файла -->
+    <!-- Main css-file -->
     <link rel="stylesheet" type="text/css" href="style.css"/>
-    <!-- Подключение css-файлов slick-slider -->
+    <!-- CSS-file of slick-slider -->
     <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <!-- Connecting Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Oxygen&display=swap" rel="stylesheet">
   </head>
   <body>
-
     <div class="main-container">
 
       <!-- Блок 1: название, видео, кнопка -->
       <div class="first-block">
-        <h1>NAZVANIE</h1>
+        <h1>SUPER LOVEVITRA</h1>
+        <h2>Super Pills for Male Power</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/orSenfTJCf8?autoplay=1&loop=1&&playlist=Video_ID&controls=0" frameborder="0" autoplay allowfullscreen></iframe>
+        <input type="submit" id="to-form" onClick='location.href="#buy-submit"' value="Hurry up to buy!">
         <div id="player"></div>
-        <input type="submit" id="to-form" value="Hurry up to buy!">
       </div> <!-- first-block -->
 
       <!-- Блок 2: слайдер -->
       <div class="second-block">
       <div class="slider">
-        <div class="slide1">
-          <img src="https://media1.giphy.com/media/1lypvxrLAAHlQLlVhR/source.gif" width:="500px" height="500px" alt="">
+        <div class="slide">
+          <img src="img/1.jpg" alt="">
+          <h3>Has proven clinical efficacy</h3>
         </div>
-        <div class="slide2">
-          <img src="https://media0.giphy.com/media/3gOKiBHZGKRPKaRIfZ/source.gif" width:="500px" height="500px" alt="">
+        <div class="slide">
+          <img src="img/2.jpg" alt="">
+          <h3>This will make you feel more confident</h3>
         </div>
-        <div class="slide3">
-          <img src="https://media3.giphy.com/media/1AiIyXakd0nt9YVMhn/source.gif" width:="500px" height="500px" alt="">
+        <div class="slide">
+          <img src="img/3.jpg" alt="">
+          <h3>Remember - this is exclusively your choice</h3>
         </div>
       </div>
       </div> <!-- second-block -->
@@ -38,47 +44,51 @@
       <!-- Блок 3: свойства товара -->
       <div class="third-block">
         <div class="property">
-          <img src="https://img2.freepng.ru/20180425/hfq/kisspng-computer-icons-drawing-pencil-5ae0a20013c637.144976311524670976081.jpg" width:="150px" height="150px" alt="">
-          <span>Описание совйства товара</span>
+          <span class="numbers">6</span><br />
+          <span class="description">hours of powerful erection</span>
         </div>
         <div class="property">
-          <img src="https://img2.freepng.ru/20180425/hfq/kisspng-computer-icons-drawing-pencil-5ae0a20013c637.144976311524670976081.jpg" width:="150px" height="150px" alt="">
-          <span>Описание совйства товара</span>
+          <span class="numbers">4</span><br />
+          <span class="description">times prolonged sexual intercourse</span>
         </div>
         <div class="property">
-          <img src="https://img2.freepng.ru/20180425/hfq/kisspng-computer-icons-drawing-pencil-5ae0a20013c637.144976311524670976081.jpg" width:="150px" height="150px" alt="">
-          <span>Описание совйства товара</span>
+          <span class="numbers">98</span><br />
+          <span class="description">% of men were satisfied with the result</span>
         </div>
       </div> <!-- third-block -->
 
       <!-- Блок 4: форма заказа,цена, таймер, кнопка заказа, подсказки -->
       <div class="fourth-block">
-
+        <div class="price-block">
+          <img src="https://www.pillenbank.com/uploads_354/offer_image/100/333/list.jpg" alt="">
+          <span class="old-price">$59</span>
+          <span class="new-price">$39</span>
+          <h3>Only now at the lowest price!</h3>
+        </div>
+        <form class="order-form" method="post">
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name" maxlength="30" placeholder="Name" title="Enter your name" required>
+          <label for="phone">Phone number</label>
+          <input type="tel" name="phone" id="phone" placeholder="+1(XXX)XXX-XXXX" title="Enter your phone in international format" required>
+          <input type="submit" id="buy-submit" value="Buy now">
+          <p id="info"></p>
+          <p>Time until the end of the promotion:</p>
+          <div id="countdown" class="countdown">
+              <span class="hours countdown-time"></span>
+              <span class="minutes countdown-time"></span>
+              <span class="seconds countdown-time"></span>
+          </div>
+        </form>
       </div> <!-- fourth-block -->
 
     </div> <!-- main-container -->
 
-
-
-    <script type="text/javascript" src="scripts.js"></script>
+    <!-- JQuery connecting -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-
+    <!-- Slick-slider connecting -->
     <script type="text/javascript" src="slick/slick.min.js"></script>
-
-
-    <script type="text/javascript">
-      $(document).ready(function(){
-  $('.slider').slick({
-  dots: true,
-  infinite: true,
-  speed: 300,
-  slidesToShow: 1,
-  autoplay: true,
-  autoplaySpeed: 2000,
-  pauseOnDotsHover: true
-});
-  });
-    </script>
+    <!-- Main JS-file connecting -->
+    <script type="text/javascript" src="scripts.js"></script>
   </body>
 </html>
